@@ -1,0 +1,201 @@
+age,sex,bmi,region,income_level,smoking_status,alcohol_intake,physical_activity,diet_quality,sleep_hours,stress_level,diabetes,hypertension,family_history,previous_heart_event,resting_bp,cholesterol,fasting_blood_sugar,max_heart_rate,resting_ecg,exercise_angina,st_depression,st_slope,avg_resting_hr,hrv_score,heart_disease
+55,Male,23.0,Midwest,Low,Never,Non-drinker,Sedentary,5,8.3,7,0,0,0,0,140,248,0,165,Left Ventricular Hypertrophy,0,0.4,Upsloping,81.9,56.7,0
+45,Female,31.5,Southeast,Low,Never,Moderate,Light,6,7.2,7,1,0,0,0,127,214,1,160,Normal,0,1.0,Upsloping,63.2,76.0,0
+57,Male,30.8,Southeast,High,Former,Non-drinker,Sedentary,2,6.1,3,0,1,1,0,150,183,0,186,ST-T Abnormality,1,1.7,Flat,67.1,52.8,0
+48,Male,34.0,Northeast,High,Never,Moderate,Active,8,8.9,1,1,0,0,0,114,181,1,192,ST-T Abnormality,1,2.7,Flat,57.4,37.8,0
+29,Male,28.4,Southeast,Middle,Never,Moderate,Light,4,6.8,3,1,0,0,0,139,262,1,202,ST-T Abnormality,0,0.2,Downsloping,60.2,50.3,0
+62,Female,30.2,West,Middle,Current,Moderate,Sedentary,7,6.7,6,0,1,0,0,153,290,0,179,ST-T Abnormality,0,0.4,Upsloping,87.2,47.9,0
+53,Female,28.9,Northeast,High,Never,Moderate,Light,5,7.4,5,0,0,0,0,126,214,0,183,Normal,1,1.8,Upsloping,63.2,61.0,0
+59,Female,24.5,Northeast,High,Never,Non-drinker,Sedentary,7,7.2,7,0,0,0,0,109,226,0,170,Normal,0,0.8,Flat,85.6,32.4,0
+72,Female,38.9,Southeast,High,Never,Moderate,Very Active,10,6.9,1,1,1,0,0,167,209,1,189,ST-T Abnormality,0,0.7,Upsloping,71.1,67.0,0
+34,Female,23.1,Midwest,High,Former,Non-drinker,Active,10,5.0,6,0,0,0,0,129,163,0,190,Normal,1,1.5,Downsloping,63.8,90.4,0
+37,Female,19.9,Midwest,High,Never,Non-drinker,Light,10,5.2,3,0,0,1,0,131,165,0,177,ST-T Abnormality,0,1.1,Upsloping,61.8,46.2,0
+29,Female,30.0,Southwest,Middle,Current,Non-drinker,Very Active,4,8.0,5,0,1,1,0,148,193,0,202,Normal,0,0.3,Flat,68.7,74.9,0
+42,Male,23.6,Southwest,High,Never,Non-drinker,Light,6,5.4,5,0,0,0,0,80,202,0,171,Normal,0,0.8,Downsloping,40.0,58.6,0
+62,Female,20.6,West,Middle,Never,Non-drinker,Sedentary,3,6.1,8,0,1,0,0,176,238,0,160,Left Ventricular Hypertrophy,0,3.6,Upsloping,63.1,17.7,0
+42,Female,30.0,West,Middle,Former,Moderate,Light,8,7.0,9,0,1,1,0,128,210,0,200,Normal,1,2.3,Flat,77.2,62.1,0
+38,Male,25.8,Midwest,Middle,Never,Non-drinker,Active,7,7.2,8,0,0,0,0,115,278,0,195,Left Ventricular Hypertrophy,0,1.1,Upsloping,52.3,71.8,0
+54,Male,25.2,West,Middle,Never,Moderate,Active,6,7.5,5,0,1,1,0,190,153,0,183,Left Ventricular Hypertrophy,1,2.0,Upsloping,72.4,41.4,0
+60,Female,15.0,West,Middle,Never,Moderate,Sedentary,6,6.5,8,0,0,0,0,147,167,1,150,Normal,0,1.2,Flat,62.1,66.0,0
+50,Female,32.9,Midwest,Middle,Never,Non-drinker,Very Active,6,9.4,9,0,0,0,0,167,170,0,179,Normal,0,0.7,Flat,49.4,46.1,0
+59,Male,15.0,Southeast,High,Never,Heavy,Sedentary,8,6.1,8,0,0,0,0,137,213,0,149,Normal,1,2.0,Upsloping,81.3,61.1,0
+47,Male,26.9,Southeast,Low,Current,Moderate,Very Active,5,5.7,8,0,1,0,0,133,254,0,174,ST-T Abnormality,1,2.6,Downsloping,60.6,53.2,0
+49,Female,30.9,Midwest,Middle,Never,Heavy,Sedentary,3,5.4,6,0,0,0,0,144,200,0,177,ST-T Abnormality,0,0.6,Flat,65.7,52.1,0
+60,Male,30.5,Midwest,Middle,Former,Moderate,Sedentary,6,7.0,7,1,0,0,0,124,125,1,178,Normal,0,0.7,Flat,57.5,53.9,0
+52,Female,20.5,Midwest,High,Former,Non-drinker,Very Active,10,6.4,5,0,0,0,0,124,252,0,167,Normal,0,0.9,Upsloping,79.8,57.0,0
+49,Male,33.7,West,Low,Never,Moderate,Light,5,6.7,7,0,1,0,0,169,210,0,170,Normal,0,2.7,Upsloping,86.0,50.7,0
+59,Female,31.6,Midwest,Middle,Never,Moderate,Sedentary,6,6.5,3,0,1,1,0,153,154,0,162,Normal,0,0.5,Flat,100.6,36.5,0
+64,Female,22.5,Northeast,Low,Never,Moderate,Very Active,7,8.0,6,0,1,0,0,145,250,0,176,ST-T Abnormality,0,1.2,Upsloping,72.4,36.0,0
+57,Male,34.4,Southwest,Middle,Never,Non-drinker,Sedentary,6,6.3,5,0,1,0,0,196,237,0,181,ST-T Abnormality,0,1.3,Upsloping,72.0,43.5,0
+29,Male,27.5,Southeast,Middle,Never,Heavy,Very Active,9,6.9,2,0,0,0,0,120,221,0,197,ST-T Abnormality,1,0.9,Upsloping,57.9,48.5,0
+58,Female,28.2,Southeast,Low,Former,Non-drinker,Active,4,7.5,4,0,0,0,0,118,293,0,165,ST-T Abnormality,0,1.4,Downsloping,79.4,53.2,0
+44,Female,32.8,Northeast,High,Never,Moderate,Light,5,6.1,7,0,0,0,0,116,200,0,183,ST-T Abnormality,0,0.5,Upsloping,60.1,66.2,0
+49,Female,22.8,Midwest,High,Former,Moderate,Active,5,6.6,5,0,0,1,0,124,203,0,167,Normal,0,0.7,Upsloping,67.3,42.4,0
+62,Male,41.1,Southeast,Middle,Never,Non-drinker,Light,8,8.4,5,0,0,0,0,153,252,0,148,Normal,0,1.0,Upsloping,60.3,87.1,0
+63,Male,25.2,Southeast,High,Former,Non-drinker,Light,6,7.4,4,1,1,0,0,124,289,1,161,Normal,0,0.5,Upsloping,49.9,51.6,0
+42,Female,28.7,Southwest,High,Never,Moderate,Light,3,7.4,6,0,0,0,0,86,166,0,154,Normal,0,0.1,Flat,62.2,50.9,0
+35,Male,17.7,Southeast,Low,Never,Moderate,Light,4,6.5,6,0,0,0,0,112,207,0,184,Normal,0,0.2,Upsloping,71.3,64.2,0
+40,Male,26.9,West,Middle,Never,Heavy,Light,8,4.5,6,0,0,0,0,113,257,0,198,ST-T Abnormality,0,1.0,Upsloping,69.5,20.9,0
+62,Male,20.9,Northeast,Middle,Former,Non-drinker,Very Active,7,5.4,4,0,0,0,0,131,213,0,163,Normal,0,0.5,Upsloping,50.7,75.3,0
+54,Male,32.8,Midwest,Low,Never,Non-drinker,Very Active,5,8.7,5,0,1,0,0,149,176,0,185,Normal,0,1.6,Downsloping,55.5,47.3,0
+38,Male,17.3,Northeast,Low,Former,Non-drinker,Very Active,5,6.3,6,0,1,1,0,137,199,0,200,Normal,1,1.7,Flat,68.2,68.8,0
+58,Male,28.7,Northeast,Middle,Never,Moderate,Very Active,7,6.3,5,0,1,1,0,121,274,0,190,Left Ventricular Hypertrophy,0,1.1,Upsloping,53.3,28.6,0
+53,Female,33.5,Northeast,Low,Never,Heavy,Active,7,6.7,8,0,1,1,0,145,203,0,175,Normal,0,0.8,Flat,51.4,49.3,0
+53,Male,23.6,West,High,Current,Non-drinker,Light,6,6.7,8,0,0,0,0,130,185,0,161,Normal,0,0.8,Downsloping,79.5,45.4,0
+54,Female,28.3,West,Low,Current,Moderate,Light,7,7.0,10,0,1,1,0,190,197,0,152,ST-T Abnormality,0,0.6,Upsloping,62.2,56.4,0
+44,Female,21.7,Southeast,Low,Never,Non-drinker,Sedentary,7,6.9,8,0,0,0,0,128,212,0,176,Normal,0,0.8,Upsloping,70.0,38.3,0
+34,Female,25.3,West,Middle,Never,Moderate,Active,8,6.3,6,0,0,0,0,129,129,1,168,Normal,0,1.8,Upsloping,83.1,40.5,0
+58,Male,38.9,Southeast,High,Former,Moderate,Sedentary,7,5.3,5,0,1,0,0,136,269,0,166,Normal,0,0.6,Upsloping,69.2,72.0,0
+35,Male,29.2,West,Low,Never,Moderate,Sedentary,8,8.9,4,0,0,0,0,94,193,0,194,Left Ventricular Hypertrophy,1,1.0,Upsloping,63.5,41.1,0
+57,Male,23.5,Southwest,High,Never,Moderate,Very Active,7,6.1,3,0,0,1,0,156,164,0,185,Left Ventricular Hypertrophy,0,1.0,Upsloping,69.6,72.4,0
+55,Female,31.5,Southeast,Low,Current,Non-drinker,Light,9,6.5,5,0,0,0,0,117,243,0,177,Normal,0,1.6,Downsloping,86.4,30.9,0
+58,Female,28.5,Southeast,Low,Former,Moderate,Light,6,6.6,9,0,0,1,0,111,273,0,175,ST-T Abnormality,0,0.9,Upsloping,65.0,75.5,0
+61,Female,21.1,Midwest,High,Never,Moderate,Very Active,6,6.7,5,0,1,0,0,148,269,0,175,Normal,0,0.4,Flat,82.6,29.1,0
+46,Female,28.1,Southeast,Middle,Never,Non-drinker,Active,7,7.3,9,0,0,0,0,166,142,0,192,Normal,0,1.6,Upsloping,56.8,47.2,0
+46,Female,22.5,Northeast,Middle,Never,Heavy,Sedentary,4,7.3,8,0,0,0,0,148,195,0,174,Left Ventricular Hypertrophy,0,2.0,Downsloping,80.9,71.3,0
+44,Female,26.5,Southwest,Middle,Never,Moderate,Very Active,7,5.9,10,0,0,0,0,144,168,0,189,Left Ventricular Hypertrophy,0,0.2,Flat,59.8,40.0,0
+43,Male,26.9,Midwest,High,Former,Heavy,Sedentary,3,6.2,7,0,0,0,0,142,173,0,202,ST-T Abnormality,0,0.4,Upsloping,66.0,47.7,0
+56,Female,25.7,Southwest,Middle,Never,Non-drinker,Light,3,6.5,4,0,1,0,0,145,174,0,170,ST-T Abnormality,0,0.9,Downsloping,71.5,63.2,0
+61,Female,30.7,Southwest,High,Never,Moderate,Active,5,5.8,2,0,0,0,0,136,244,0,157,Normal,0,0.8,Flat,74.9,18.3,0
+50,Male,28.6,Midwest,Low,Never,Moderate,Active,3,5.5,7,0,0,0,0,144,229,1,169,Normal,0,0.4,Upsloping,58.9,73.7,0
+33,Female,25.3,Northeast,Middle,Current,Moderate,Active,4,6.2,6,0,1,0,0,183,189,0,193,Normal,0,0.5,Upsloping,65.7,59.1,0
+66,Male,27.0,Midwest,Low,Never,Non-drinker,Light,8,6.8,7,0,1,1,0,164,255,0,171,ST-T Abnormality,1,3.7,Upsloping,60.4,30.5,0
+56,Female,33.9,Southeast,Middle,Never,Non-drinker,Sedentary,6,5.6,10,1,1,0,0,136,214,1,168,Normal,0,0.6,Upsloping,84.4,26.1,0
+53,Female,27.6,Southeast,Middle,Former,Non-drinker,Sedentary,7,8.0,8,0,0,1,0,96,248,0,174,Normal,0,1.6,Flat,74.2,50.8,0
+29,Female,25.6,West,Low,Former,Non-drinker,Sedentary,6,6.0,6,0,0,0,0,151,228,0,194,Normal,0,1.6,Upsloping,69.0,80.7,0
+49,Male,18.5,Northeast,Low,Current,Moderate,Sedentary,3,7.2,7,0,1,0,0,128,161,0,153,Normal,0,0.5,Flat,74.2,73.0,0
+41,Male,24.6,Midwest,High,Never,Moderate,Light,6,5.8,9,0,0,1,0,111,186,0,195,ST-T Abnormality,0,0.3,Upsloping,61.7,40.3,0
+57,Male,30.6,Southwest,High,Former,Moderate,Active,6,7.5,6,0,1,0,0,128,259,0,174,Left Ventricular Hypertrophy,0,1.1,Flat,63.9,52.4,0
+63,Female,26.5,Midwest,Middle,Never,Moderate,Very Active,4,7.6,6,1,1,0,0,156,211,0,180,Normal,0,0.6,Flat,57.4,77.4,0
+44,Female,32.2,West,Middle,Never,Non-drinker,Very Active,5,7.2,10,0,0,1,0,103,243,0,190,ST-T Abnormality,0,1.0,Upsloping,60.2,30.0,0
+48,Female,24.9,Southwest,High,Never,Non-drinker,Active,5,6.0,7,0,0,0,0,107,212,0,187,ST-T Abnormality,1,1.7,Flat,83.3,73.9,0
+59,Female,36.2,Southeast,Middle,Former,Heavy,Very Active,7,7.6,8,0,1,0,0,193,224,0,189,Left Ventricular Hypertrophy,0,2.0,Flat,53.6,10.7,0
+56,Male,29.8,Southeast,Middle,Former,Heavy,Sedentary,6,7.8,4,0,0,0,0,118,254,0,165,ST-T Abnormality,0,0.6,Flat,54.4,38.0,0
+43,Male,25.5,Southeast,Middle,Former,Moderate,Very Active,4,9.6,9,0,0,0,0,110,181,0,170,ST-T Abnormality,0,2.0,Flat,62.9,39.1,0
+67,Female,18.9,Midwest,Middle,Former,Non-drinker,Sedentary,9,6.4,3,0,1,0,0,166,210,0,175,Left Ventricular Hypertrophy,0,1.9,Upsloping,94.0,80.4,0
+45,Male,24.5,Southwest,Low,Former,Moderate,Light,3,7.4,6,0,0,1,0,128,133,0,186,Normal,0,1.8,Upsloping,79.0,100.0,0
+36,Male,21.1,Southeast,Low,Never,Moderate,Light,5,8.3,5,0,0,0,0,133,225,0,194,Normal,0,0.5,Upsloping,81.9,57.8,0
+68,Female,36.3,Midwest,Middle,Never,Heavy,Light,6,4.4,5,0,1,0,0,178,249,0,173,Left Ventricular Hypertrophy,0,1.1,Upsloping,58.7,33.8,0
+44,Female,27.5,Southeast,Middle,Never,Non-drinker,Light,5,6.0,9,0,0,1,0,138,238,0,183,Normal,0,0.8,Flat,81.9,64.1,0
+50,Male,28.1,Northeast,Middle,Never,Non-drinker,Active,4,7.2,8,0,0,0,0,102,231,0,177,Normal,0,0.5,Flat,76.3,79.7,0
+29,Female,32.0,West,Middle,Current,Moderate,Light,8,7.8,6,0,0,1,0,112,138,0,171,ST-T Abnormality,0,0.5,Upsloping,67.2,43.8,0
+55,Male,16.9,Southeast,High,Never,Non-drinker,Active,6,6.0,5,0,1,1,0,132,148,0,182,Left Ventricular Hypertrophy,0,0.4,Downsloping,54.2,59.8,0
+55,Female,33.2,West,Low,Never,Moderate,Very Active,6,6.7,7,0,1,0,0,155,206,0,171,ST-T Abnormality,0,0.4,Flat,41.9,64.9,0
+34,Male,29.8,Southeast,Low,Former,Moderate,Active,5,7.4,8,0,0,1,0,110,179,0,202,ST-T Abnormality,0,2.2,Flat,69.5,78.6,0
+57,Female,32.6,Southwest,High,Former,Moderate,Active,10,7.6,5,0,1,1,0,180,223,0,167,Normal,0,1.4,Upsloping,70.5,68.2,0
+38,Female,28.4,West,Middle,Never,Non-drinker,Active,9,4.8,6,0,0,1,0,115,126,0,194,Left Ventricular Hypertrophy,0,0.0,Upsloping,60.8,66.2,0
+29,Female,23.1,Southeast,Middle,Former,Moderate,Sedentary,1,6.3,2,0,0,0,0,109,227,1,186,Left Ventricular Hypertrophy,0,0.0,Downsloping,68.6,78.1,0
+51,Male,27.0,Southwest,Low,Never,Non-drinker,Active,7,5.7,4,0,1,1,0,174,250,0,161,ST-T Abnormality,0,0.2,Flat,53.4,52.1,0
+50,Male,17.6,Southwest,High,Never,Moderate,Very Active,7,5.1,9,0,0,1,0,119,160,0,186,Normal,0,0.9,Upsloping,74.1,97.6,0
+45,Male,34.9,Midwest,Middle,Former,Moderate,Active,9,6.5,9,0,0,0,0,119,235,0,181,Normal,1,3.1,Upsloping,71.5,27.7,0
+66,Male,22.5,Northeast,Middle,Never,Non-drinker,Sedentary,5,7.1,3,0,0,1,0,130,245,0,164,ST-T Abnormality,0,1.5,Upsloping,80.4,17.0,0
+56,Male,20.1,Southeast,Middle,Never,Non-drinker,Light,7,7.7,1,0,0,1,0,129,199,0,188,Normal,0,1.2,Downsloping,73.6,66.2,0
+53,Female,28.7,Southwest,Low,Current,Non-drinker,Active,5,7.2,8,0,0,1,0,112,256,0,186,Normal,0,0.4,Downsloping,73.6,37.9,0
+60,Male,34.4,Northeast,Middle,Never,Non-drinker,Sedentary,4,7.1,3,0,0,1,0,104,190,0,172,ST-T Abnormality,0,0.6,Upsloping,64.0,15.6,0
+61,Female,26.7,Northeast,Low,Never,Moderate,Very Active,5,6.5,7,0,1,1,0,146,134,0,185,ST-T Abnormality,0,0.8,Upsloping,68.3,57.5,0
+35,Male,25.4,West,Low,Former,Non-drinker,Sedentary,5,7.1,1,0,0,1,0,121,195,0,184,Normal,1,1.6,Upsloping,69.5,50.3,0
+36,Male,26.5,Southwest,Middle,Current,Non-drinker,Very Active,6,5.3,5,0,0,0,0,115,225,0,202,ST-T Abnormality,0,0.2,Flat,72.0,52.5,0
+49,Male,35.2,Southeast,High,Current,Moderate,Light,5,5.2,4,0,1,0,0,176,185,0,159,Normal,0,1.1,Upsloping,85.8,70.1,0
+66,Female,35.0,Northeast,Middle,Never,Moderate,Active,5,7.3,4,0,1,0,0,148,292,0,180,Left Ventricular Hypertrophy,0,0.6,Downsloping,80.6,57.5,0
+48,Male,29.1,Southeast,Low,Never,Non-drinker,Sedentary,7,7.5,8,0,1,1,0,137,165,0,189,ST-T Abnormality,0,1.8,Upsloping,71.0,69.7,0
+47,Female,23.6,Northeast,Middle,Never,Non-drinker,Active,2,7.4,7,0,0,0,0,144,187,0,173,Normal,0,0.6,Flat,60.9,97.8,0
+56,Male,37.1,Southwest,Middle,Never,Moderate,Light,9,7.8,3,1,1,0,0,169,160,1,167,Left Ventricular Hypertrophy,1,1.2,Flat,93.3,53.9,1
+61,Male,21.1,Southeast,Middle,Current,Non-drinker,Very Active,6,5.9,10,0,0,1,0,157,252,0,174,Normal,0,1.8,Flat,58.0,15.2,1
+51,Male,21.1,Northeast,Middle,Current,Non-drinker,Sedentary,9,8.3,4,0,1,0,0,163,210,0,183,ST-T Abnormality,1,2.5,Upsloping,76.5,29.8,1
+66,Female,28.7,Midwest,Middle,Former,Heavy,Very Active,8,5.4,6,0,1,0,0,183,184,0,169,Left Ventricular Hypertrophy,0,1.2,Downsloping,94.7,27.7,1
+59,Male,25.1,Southeast,High,Former,Heavy,Light,9,6.3,5,1,0,1,0,139,233,0,176,Normal,0,0.8,Upsloping,70.5,60.8,1
+43,Female,32.4,Southwest,Low,Former,Non-drinker,Very Active,6,7.4,7,0,0,0,0,121,114,0,178,Normal,0,0.5,Downsloping,50.7,59.6,1
+49,Male,21.4,Southeast,Low,Current,Moderate,Sedentary,4,8.7,8,0,0,1,0,101,198,0,155,ST-T Abnormality,0,0.9,Flat,63.4,34.5,1
+42,Male,36.8,West,Middle,Never,Moderate,Sedentary,7,7.7,10,1,1,1,0,192,189,0,178,ST-T Abnormality,0,0.5,Flat,76.0,56.2,1
+49,Male,22.0,Midwest,Low,Never,Non-drinker,Very Active,7,9.2,9,0,0,0,0,141,204,0,166,Left Ventricular Hypertrophy,1,2.0,Flat,77.5,65.2,1
+57,Female,24.6,Northeast,Low,Never,Non-drinker,Very Active,4,6.5,8,0,1,0,0,184,256,0,174,Normal,0,1.9,Upsloping,59.4,49.7,1
+49,Male,35.5,Southeast,Middle,Former,Non-drinker,Sedentary,6,6.8,7,0,1,0,0,171,239,0,169,Normal,0,1.5,Upsloping,79.4,39.9,1
+66,Female,35.3,Southeast,High,Never,Moderate,Light,4,7.0,5,0,0,0,0,140,240,0,168,Normal,0,1.1,Upsloping,63.6,60.8,1
+80,Male,24.5,West,Middle,Never,Moderate,Very Active,3,7.8,8,1,1,1,0,171,304,0,175,Normal,1,3.6,Downsloping,81.7,36.9,1
+80,Male,32.0,Midwest,High,Never,Heavy,Sedentary,5,6.8,8,0,1,1,0,188,264,0,143,ST-T Abnormality,0,2.1,Upsloping,65.7,43.2,1
+63,Male,34.3,West,Middle,Never,Non-drinker,Light,8,5.6,7,0,1,0,0,163,100,0,168,Left Ventricular Hypertrophy,1,2.4,Upsloping,83.1,40.6,1
+56,Female,45.7,Northeast,High,Former,Non-drinker,Very Active,10,4.5,3,0,1,1,0,145,222,1,193,Normal,1,4.2,Flat,80.6,74.4,1
+46,Male,23.1,Southwest,Middle,Current,Moderate,Active,6,8.6,6,0,0,0,1,101,222,0,183,Left Ventricular Hypertrophy,0,0.1,Downsloping,74.0,23.4,1
+70,Male,31.7,Southwest,Low,Former,Moderate,Light,6,9.2,5,1,1,1,0,166,211,1,146,Left Ventricular Hypertrophy,1,4.8,Upsloping,51.7,25.1,1
+59,Male,23.0,West,Low,Never,Non-drinker,Active,10,6.5,5,0,1,1,0,176,188,0,159,Normal,1,1.5,Downsloping,75.0,72.6,1
+42,Male,18.6,Midwest,High,Former,Moderate,Sedentary,5,6.5,7,0,0,0,0,115,279,0,186,Left Ventricular Hypertrophy,0,1.0,Downsloping,66.4,26.2,1
+54,Male,26.9,Northeast,Middle,Current,Moderate,Light,6,6.9,7,0,0,0,0,137,130,0,174,Normal,0,1.2,Upsloping,83.6,21.1,1
+71,Female,32.9,Southwest,Low,Former,Heavy,Active,6,8.0,5,0,1,1,0,160,213,0,144,ST-T Abnormality,1,2.0,Upsloping,51.9,61.2,1
+60,Female,46.0,Southeast,Low,Former,Moderate,Sedentary,7,7.2,7,1,1,0,0,164,268,0,147,ST-T Abnormality,0,1.3,Flat,73.3,30.6,1
+45,Male,29.2,Southeast,Middle,Current,Moderate,Light,7,5.8,4,1,1,0,0,178,150,1,168,Normal,1,1.5,Flat,78.4,58.3,1
+46,Male,31.2,Northeast,Middle,Never,Non-drinker,Active,5,7.3,5,0,0,1,0,156,202,0,164,ST-T Abnormality,1,4.0,Flat,58.9,44.8,1
+54,Male,31.8,Southeast,Low,Never,Moderate,Sedentary,9,7.6,6,0,1,0,1,200,177,0,172,ST-T Abnormality,0,0.4,Flat,78.0,51.9,1
+66,Male,36.2,Southeast,Low,Current,Moderate,Sedentary,3,6.7,2,0,1,0,1,150,228,0,157,Normal,1,2.7,Upsloping,72.5,51.3,1
+53,Male,31.9,Midwest,Low,Never,Non-drinker,Sedentary,8,5.7,10,0,0,0,0,115,219,0,154,Normal,0,1.6,Flat,100.3,44.0,1
+45,Male,28.8,Southwest,Low,Never,Moderate,Light,7,6.6,7,0,0,1,0,106,282,0,162,ST-T Abnormality,0,2.4,Flat,71.6,28.1,1
+29,Female,30.1,Southeast,Middle,Never,Moderate,Very Active,3,7.5,3,0,0,0,0,142,203,0,187,ST-T Abnormality,0,0.3,Downsloping,57.1,61.8,1
+76,Male,34.8,Southeast,Middle,Former,Non-drinker,Active,7,8.1,4,0,1,0,0,192,306,0,180,Normal,0,1.0,Flat,69.0,72.1,1
+49,Female,33.2,Northeast,Low,Current,Moderate,Sedentary,8,6.5,4,0,0,0,0,166,190,0,156,Normal,0,1.0,Upsloping,90.2,53.0,1
+57,Female,35.2,Southwest,High,Never,Non-drinker,Sedentary,2,8.3,3,0,1,1,0,190,178,0,184,Left Ventricular Hypertrophy,1,3.2,Downsloping,72.8,68.2,1
+59,Male,24.4,Southeast,Middle,Never,Non-drinker,Light,5,8.1,8,0,0,1,0,142,143,0,169,ST-T Abnormality,0,0.9,Upsloping,83.0,51.0,1
+51,Male,20.4,Midwest,High,Never,Moderate,Light,6,7.5,5,0,0,1,0,114,206,0,185,ST-T Abnormality,1,2.1,Flat,96.3,59.4,1
+60,Male,29.3,Northeast,Low,Never,Non-drinker,Light,5,7.2,9,0,0,0,0,144,204,0,156,Normal,0,1.4,Flat,71.8,20.7,1
+62,Female,34.3,Northeast,Middle,Current,Moderate,Sedentary,4,6.5,6,0,1,0,0,108,246,0,159,ST-T Abnormality,0,0.6,Upsloping,52.9,63.0,1
+55,Male,24.7,Southwest,Low,Never,Moderate,Sedentary,4,6.9,5,0,0,0,0,118,255,0,144,ST-T Abnormality,0,0.7,Downsloping,57.9,47.1,1
+63,Male,26.2,Northeast,Middle,Never,Moderate,Very Active,4,6.7,4,0,0,0,0,123,182,0,167,Left Ventricular Hypertrophy,1,2.3,Flat,82.8,33.1,1
+54,Female,22.5,Northeast,Low,Never,Non-drinker,Light,8,6.7,8,0,1,0,0,163,306,1,186,Normal,0,0.3,Upsloping,86.4,42.9,1
+59,Male,29.0,Southwest,Middle,Never,Heavy,Very Active,4,5.3,4,0,1,0,0,160,244,0,178,ST-T Abnormality,1,2.1,Flat,66.5,55.1,1
+67,Male,27.4,Southeast,High,Never,Heavy,Active,7,5.3,4,0,1,0,0,120,203,0,202,ST-T Abnormality,1,4.0,Flat,57.4,65.1,1
+69,Female,24.4,West,Middle,Never,Non-drinker,Very Active,7,7.1,4,0,1,1,0,166,285,0,179,ST-T Abnormality,0,1.2,Upsloping,63.4,60.7,1
+66,Male,24.9,Southwest,Low,Former,Moderate,Light,3,6.0,4,0,1,0,0,137,135,0,174,ST-T Abnormality,1,2.0,Upsloping,78.0,55.5,1
+70,Male,42.8,Northeast,Middle,Current,Moderate,Light,3,7.2,9,1,1,0,0,158,229,0,172,Left Ventricular Hypertrophy,1,3.1,Flat,73.2,42.2,1
+74,Male,24.3,Northeast,High,Never,Moderate,Sedentary,6,7.7,5,0,1,1,0,147,197,0,135,Left Ventricular Hypertrophy,0,1.3,Flat,89.1,17.0,1
+34,Female,30.3,Southwest,High,Current,Heavy,Sedentary,6,9.1,8,0,1,1,0,184,210,0,181,ST-T Abnormality,0,1.0,Upsloping,75.8,26.9,1
+64,Male,22.4,Northeast,Middle,Never,Moderate,Very Active,5,5.3,3,1,1,1,0,160,244,1,176,ST-T Abnormality,1,1.4,Upsloping,64.5,87.3,1
+68,Male,27.7,West,High,Never,Non-drinker,Active,5,6.5,6,0,0,0,0,131,225,0,160,ST-T Abnormality,0,2.3,Flat,69.1,61.0,1
+73,Male,35.1,West,Low,Never,Non-drinker,Light,5,5.7,7,1,1,1,0,171,242,1,161,Normal,1,2.2,Flat,54.5,26.7,1
+47,Male,25.3,Southeast,High,Current,Moderate,Active,5,7.2,6,0,0,0,0,131,168,0,181,Left Ventricular Hypertrophy,0,1.7,Upsloping,65.0,74.8,1
+74,Female,31.8,Southeast,Low,Former,Moderate,Light,7,7.2,6,1,1,0,0,188,237,1,157,Normal,1,2.8,Downsloping,65.7,45.3,1
+65,Male,28.8,Midwest,Low,Never,Moderate,Light,3,5.9,7,1,1,1,0,137,238,0,166,ST-T Abnormality,1,1.2,Flat,76.8,40.8,1
+67,Female,33.0,Southeast,Low,Never,Moderate,Very Active,7,8.3,7,0,1,1,1,176,258,0,173,Normal,1,2.0,Upsloping,61.8,63.4,1
+74,Female,28.3,Northeast,Low,Former,Non-drinker,Active,3,5.5,8,0,1,1,0,181,344,0,182,Normal,1,2.7,Flat,79.5,61.5,1
+66,Male,15.0,Midwest,Middle,Former,Non-drinker,Light,5,6.6,1,0,1,1,0,179,238,0,180,ST-T Abnormality,0,0.8,Upsloping,69.6,44.2,1
+79,Female,30.8,West,Middle,Former,Moderate,Sedentary,5,8.2,7,0,0,0,0,138,197,0,144,Left Ventricular Hypertrophy,0,0.9,Upsloping,78.9,5.0,1
+80,Male,40.9,Southeast,Low,Former,Moderate,Light,9,8.5,6,1,1,0,0,172,321,1,154,Left Ventricular Hypertrophy,1,3.7,Upsloping,73.1,46.5,1
+58,Male,29.7,Southeast,Middle,Never,Moderate,Sedentary,5,6.1,7,0,0,0,0,139,157,0,171,Normal,0,0.4,Upsloping,61.0,20.6,1
+54,Female,29.7,Southeast,Low,Current,Moderate,Sedentary,3,6.3,7,1,1,0,0,185,159,1,158,ST-T Abnormality,0,0.6,Upsloping,68.3,47.6,1
+80,Male,26.9,Midwest,High,Former,Moderate,Very Active,6,7.9,2,0,0,0,0,141,239,0,166,ST-T Abnormality,1,2.4,Downsloping,62.7,67.4,1
+59,Male,21.8,Northeast,Low,Former,Non-drinker,Sedentary,3,7.1,9,0,1,0,0,176,142,0,154,ST-T Abnormality,1,2.3,Downsloping,88.4,61.0,1
+80,Male,28.7,Northeast,Middle,Never,Moderate,Sedentary,9,7.2,10,0,1,0,1,160,268,0,177,ST-T Abnormality,0,5.2,Downsloping,86.4,49.4,1
+42,Male,27.6,Midwest,Low,Former,Heavy,Active,3,5.3,7,0,0,1,0,98,211,0,188,ST-T Abnormality,0,0.2,Flat,62.8,86.2,1
+71,Male,38.1,Northeast,Middle,Current,Heavy,Light,9,5.9,2,0,0,1,0,163,266,0,181,Normal,0,2.1,Downsloping,77.2,45.6,1
+54,Male,24.0,Southwest,Low,Never,Non-drinker,Light,2,6.8,8,0,1,1,0,161,242,0,182,Normal,0,1.0,Upsloping,58.9,47.3,1
+59,Female,23.9,Midwest,Middle,Never,Non-drinker,Light,6,5.7,6,0,0,0,0,156,297,0,153,Normal,0,0.7,Upsloping,67.9,64.0,1
+70,Female,24.6,Southeast,Middle,Never,Non-drinker,Active,4,7.9,8,0,1,1,0,167,240,0,154,ST-T Abnormality,0,0.7,Upsloping,58.9,63.9,1
+54,Female,32.8,Southwest,Low,Former,Moderate,Sedentary,4,6.2,5,0,0,0,0,124,224,0,165,Left Ventricular Hypertrophy,0,1.0,Upsloping,70.0,45.9,1
+67,Female,27.6,Southeast,High,Current,Moderate,Sedentary,5,6.4,4,0,1,0,0,142,292,0,167,Normal,0,1.5,Flat,79.7,13.7,1
+75,Male,32.7,Southeast,Middle,Never,Heavy,Light,6,6.9,4,0,0,1,0,108,208,0,150,ST-T Abnormality,1,2.8,Flat,78.9,23.8,1
+51,Male,34.2,Midwest,Middle,Never,Non-drinker,Light,8,7.7,7,0,1,0,0,125,138,0,165,Left Ventricular Hypertrophy,1,1.7,Flat,67.2,53.9,1
+54,Male,28.1,Southwest,Low,Current,Heavy,Active,6,8.0,10,0,1,1,0,168,258,0,167,Normal,1,2.1,Upsloping,69.2,54.2,1
+72,Female,31.0,Southeast,Middle,Never,Non-drinker,Sedentary,8,6.7,6,0,1,1,0,167,234,0,127,ST-T Abnormality,0,1.5,Flat,87.4,49.9,1
+51,Male,32.7,Southeast,Low,Never,Non-drinker,Sedentary,2,6.5,8,0,0,0,0,148,199,0,169,ST-T Abnormality,0,2.0,Upsloping,72.9,5.0,1
+72,Male,32.2,Southeast,Middle,Never,Non-drinker,Sedentary,8,6.8,8,0,1,0,0,188,100,0,160,ST-T Abnormality,0,1.5,Flat,71.0,15.4,1
+36,Male,28.6,Northeast,Low,Former,Moderate,Light,7,7.0,6,0,1,1,0,146,213,1,185,ST-T Abnormality,0,0.0,Flat,88.6,54.5,1
+73,Female,19.9,West,Low,Current,Non-drinker,Sedentary,4,8.3,9,0,0,1,0,161,227,0,128,Normal,1,2.7,Downsloping,94.3,20.2,1
+80,Female,35.9,Southeast,Middle,Never,Moderate,Very Active,4,6.6,3,1,1,0,0,198,189,1,143,Left Ventricular Hypertrophy,0,1.2,Flat,71.0,49.5,1
+57,Female,31.7,West,Middle,Never,Heavy,Sedentary,6,7.4,8,0,1,0,0,168,269,0,189,Normal,0,0.7,Flat,65.6,50.7,1
+65,Female,31.5,Southeast,Low,Former,Heavy,Light,3,6.7,3,0,1,1,0,135,245,0,156,ST-T Abnormality,0,0.6,Upsloping,69.5,14.8,1
+51,Male,30.6,Midwest,Middle,Never,Moderate,Active,1,6.1,7,0,0,1,0,138,209,0,151,Left Ventricular Hypertrophy,0,0.4,Upsloping,57.1,50.7,1
+60,Male,35.1,Midwest,Low,Former,Heavy,Light,8,8.9,8,0,1,1,0,192,301,0,180,Left Ventricular Hypertrophy,0,1.0,Flat,102.0,60.8,1
+70,Female,30.5,Midwest,Middle,Never,Moderate,Light,4,7.7,2,0,1,0,0,166,313,0,150,Normal,1,1.8,Flat,64.5,56.3,1
+56,Male,29.9,Southwest,Middle,Current,Moderate,Active,8,7.6,6,0,1,0,0,181,191,0,173,Left Ventricular Hypertrophy,0,0.5,Upsloping,71.7,5.0,1
+68,Male,35.2,West,High,Never,Moderate,Light,7,5.5,8,0,1,0,0,162,160,0,179,ST-T Abnormality,0,0.9,Upsloping,58.4,24.0,1
+67,Male,35.8,Southeast,Low,Never,Moderate,Very Active,8,6.3,5,0,0,0,0,118,251,0,178,Left Ventricular Hypertrophy,1,2.0,Flat,68.4,72.0,1
+48,Male,25.8,Midwest,Middle,Never,Heavy,Active,9,6.1,6,0,1,0,0,125,180,0,197,ST-T Abnormality,0,0.8,Upsloping,67.3,64.5,1
+51,Male,23.7,Southwest,Middle,Never,Moderate,Sedentary,5,7.3,5,0,0,1,0,112,276,0,180,Normal,0,2.0,Flat,61.0,59.3,1
+75,Female,31.3,Northeast,High,Never,Non-drinker,Sedentary,5,5.4,4,0,1,0,0,194,223,0,153,ST-T Abnormality,0,1.4,Downsloping,66.3,33.8,1
+57,Male,29.6,Northeast,Middle,Never,Moderate,Light,4,6.6,8,0,0,0,0,146,222,0,187,ST-T Abnormality,0,0.8,Upsloping,60.0,5.5,1
+35,Male,19.6,Midwest,Low,Former,Moderate,Light,8,6.8,6,1,0,0,0,139,172,1,187,ST-T Abnormality,1,2.3,Downsloping,47.2,54.2,1
+59,Male,39.8,Midwest,Low,Never,Moderate,Sedentary,6,6.3,7,0,1,1,0,140,172,0,188,ST-T Abnormality,0,0.4,Flat,71.5,50.7,1
+49,Male,37.5,Northeast,Middle,Never,Non-drinker,Sedentary,6,9.3,2,0,1,0,0,179,216,0,175,ST-T Abnormality,1,1.7,Downsloping,62.8,47.7,1
+53,Female,37.1,Southeast,Middle,Former,Non-drinker,Sedentary,3,7.0,5,0,1,0,1,147,262,0,177,Left Ventricular Hypertrophy,0,0.4,Upsloping,56.6,54.6,1
+57,Female,33.7,Southeast,Middle,Never,Non-drinker,Sedentary,4,8.3,7,1,0,0,0,115,179,0,165,ST-T Abnormality,1,1.3,Upsloping,72.3,29.8,1
+78,Female,23.3,Midwest,Low,Current,Moderate,Very Active,4,4.9,5,1,1,0,0,177,241,1,163,Left Ventricular Hypertrophy,1,3.5,Flat,83.4,84.1,1
+38,Male,28.6,Southwest,Middle,Never,Moderate,Light,5,6.4,6,1,0,0,0,134,157,0,187,Left Ventricular Hypertrophy,0,3.3,Upsloping,70.6,58.1,1
+47,Male,24.9,Southwest,Low,Current,Non-drinker,Sedentary,6,5.6,5,0,1,0,0,120,239,0,178,ST-T Abnormality,1,3.0,Flat,61.3,57.0,1
+80,Female,26.2,West,High,Never,Non-drinker,Light,10,10.0,5,0,0,0,0,138,264,1,164,Normal,1,2.0,Flat,81.8,31.2,1
