@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 import os
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import (
     accuracy_score,
     roc_auc_score,
@@ -15,14 +16,14 @@ from sklearn.metrics import (
     ConfusionMatrixDisplay
 )
 
-# 1. Page Configuration
+# ---- Page Configuration ----
 st.set_page_config(
     page_title="Heart Disease Classification Dashboard",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# 2. Dictionary Mapping Display Names to Exact .joblib Filenames
+# ---- Dictionary Mapping Display Names to Exact .joblib Filenames ----
 MODEL_FILES = {
     "Logistic Regression": "logistic_regression.joblib",
     "Decision Tree": "decision_tree.joblib",
@@ -31,7 +32,7 @@ MODEL_FILES = {
     "Support Vector Machine (SVM)": "support_vector_machine.joblib"
 }
 
-# 3. Cached Data & Model Loaders
+# ---- Cached Data & Model Loaders ----
 @st.cache_resource
 def load_model(model_filename):
     model_path = os.path.join("model", model_filename)
@@ -42,7 +43,7 @@ def load_test_data(set_number):
     csv_path = os.path.join("test_sets", f"heart_disease_test_set_{set_number}.csv")
     return pd.read_csv(csv_path)
 
-# 4. Sidebar Configuration
+# ---- Sidebar Configuration ----
 st.sidebar.header("Configuration")
 
 selected_model_name = st.sidebar.selectbox(
@@ -56,7 +57,7 @@ selected_dataset_num = st.sidebar.selectbox(
     format_func=lambda x: f"Test Dataset {x} (heart_disease_test_set_{x}.csv)"
 )
 
-# 5. Main Dashboard Header & Dataset Description
+# ---- Main Dashboard Header & Dataset Description ----
 st.title("Heart Disease Classification Dashboard")
 
 st.info(
@@ -65,32 +66,70 @@ st.info(
     "(100 healthy, 100 diagnosed with heart disease) across clinical and lifestyle indicators."
 )
 
-# 6. Load Selected Assets & Generate Predictions
+
+# ---- Define updated list of categorical variables  ----
+continuous_vars = [
+    "age", "bmi", "stress_level",
+    "resting_bp", "cholesterol", "st_depression",
+    "avg_resting_hr"
+]
+
+categorical_vars = [
+    "sex", "smoking_status", "alcohol_intake",
+    "physical_activity", "diabetes", "hypertension",
+    "family_history", "previous_heart_event"
+]
+
+# ---- Function to encode the datasets ----
+def encode_data(data):
+
+    # ---- Drop the unnecesary columns ----
+    data_new=data.drop(columns=["region","income_level","st_slope","sleep_hours", "diet_quality","max_heart_rate","hrv_score","fasting_blood_sugar","resting_ecg","exercise_angina"])
+    data_encoded = pd.get_dummies(data_new, columns=categorical_vars, drop_first=True)
+
+    # ---- Convert any remaining boolean True/False outputs into clean 1s and 0s ----
+    dummy_cols = [col for col in data_encoded.columns if col not in df.columns or col in categorical_vars]
+    data_encoded[dummy_cols] = data_encoded[dummy_cols].astype(int)
+
+    return data_encoded
+
+# ---- Load Selected Assets & Generate Predictions ----
 try:
     model = load_model(MODEL_FILES[selected_model_name])
     df_test = load_test_data(selected_dataset_num)
 
-    # Separate features and target
-    X_test = df_test.drop(columns=["heart_disease"])
-    y_true = df_test["heart_disease"]
 
-    # Generate predictions and probabilities
-    y_pred = model.predict(X_test)
-    
+    # ---- Separate your features (X) and target variable (y) ----
+    test_encoded = encode_data(df_test)
+    X_test = test_encoded.drop(columns=['heart_disease'])
+    y_true = test_encoded['heart_disease']
+
+    # ---- Initialize the StandardScaler ----
+    scaler = StandardScaler()
+
+    # ---- Fit the scaler on the training data and transform both sets ----
+    X_test_scaled = X_test.copy()
+
+    # ---- Fit & transform the continuous columns on Train; transform only on Test ----
+    X_test_scaled[continuous_vars] = scaler.transform(X_test[continuous_vars])
+
+    # ---- Generate predictions and probabilities ----
+    y_pred = model.predict(X_test_scaled)
+
     if hasattr(model, "predict_proba"):
-        y_prob = model.predict_proba(X_test)[:, 1]
+        y_prob = model.predict_proba(X_test_scaled)[:, 1]
         auc_val = roc_auc_score(y_true, y_prob)
     else:
         auc_val = roc_auc_score(y_true, y_pred)
 
-    # Calculate all 6 performance metrics
+    # ---- Calculate all 6 performance metrics ----
     acc_val = accuracy_score(y_true, y_pred)
     prec_val = precision_score(y_true, y_pred, zero_division=0)
     rec_val = recall_score(y_true, y_pred, zero_division=0)
     f1_val = f1_score(y_true, y_pred, zero_division=0)
     mcc_val = matthews_corrcoef(y_true, y_pred)
 
-    # 7. Dynamic Performance Summary Paragraph
+    # ---- Dynamic Performance Summary Paragraph ----
     st.markdown(
         f"**Model Performance Summary:** Evaluating **{selected_model_name}** on **Test Dataset {selected_dataset_num}** "
         f"yields an overall accuracy of **{acc_val:.2%}** and an AUC of **{auc_val:.4f}**. "
@@ -100,7 +139,7 @@ try:
 
     st.divider()
 
-    # 8. Evaluation Metrics Grid
+    # ---- Evaluation Metrics Grid ----
     st.subheader(f"Evaluation Metrics for: {selected_model_name}")
 
     col1, col2, col3 = st.columns(3)
@@ -115,26 +154,26 @@ try:
 
     st.divider()
 
-    # 9. Visual Confusion Matrix Plot
+    # ---- Visual Confusion Matrix Plot ----
     st.subheader("Confusion Matrix")
 
-    # Constrain the chart width using columns so it doesn't stretch across the entire wide screen
+    # ---- Constrain the chart width using columns so it doesn't stretch across the entire wide screen ----
     plot_col, _ = st.columns([1, 2])
 
     with plot_col:
         fig, ax = plt.subplots(figsize=(4, 4))
-        
-        # Ensure clean white plot background and remove gridlines
+
+        # ---- Ensure clean white plot background and remove gridlines ----
         fig.patch.set_facecolor("white")
         ax.set_facecolor("white")
-        
+
         cm = confusion_matrix(y_true, y_pred)
         disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=[0, 1])
         disp.plot(ax=ax, cmap="Blues", colorbar=False)
-        
+
         ax.grid(False)
         ax.set_title(selected_model_name, fontsize=12, fontweight="bold", pad=10)
-        
+
         st.pyplot(fig, use_container_width=False)
         plt.close(fig)
 
