@@ -1,0 +1,152 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import joblib
+import os
+import matplotlib.pyplot as plt
+from sklearn.metrics import (
+    accuracy_score,
+    roc_auc_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    matthews_corrcoef,
+    confusion_matrix,
+    ConfusionMatrixDisplay
+)
+
+# 1. Page Configuration
+st.set_page_config(
+    page_title="Heart Disease Classification Dashboard",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# 2. Dictionary Mapping Display Names to Exact .joblib Filenames
+MODEL_FILES = {
+    "Logistic Regression": "logistic_regression.joblib",
+    "Decision Tree": "decision_tree.joblib",
+    "K-Nearest Neighbors (KNN)": "knn.joblib",
+    "Naive Bayes (Gaussian)": "naive_bayes_gaussian.joblib",
+    "Support Vector Machine (SVM)": "support_vector_machine.joblib"
+}
+
+# 3. Cached Data & Model Loaders
+@st.cache_resource
+def load_model(model_filename):
+    model_path = os.path.join("model", model_filename)
+    return joblib.load(model_path)
+
+@st.cache_data
+def load_test_data(set_number):
+    csv_path = os.path.join("test_sets", f"heart_disease_test_set_{set_number}.csv")
+    return pd.read_csv(csv_path)
+
+# 4. Sidebar Configuration
+st.sidebar.header("Configuration")
+
+selected_model_name = st.sidebar.selectbox(
+    "Select Classification Model",
+    list(MODEL_FILES.keys())
+)
+
+selected_dataset_num = st.sidebar.selectbox(
+    "Select Test Dataset",
+    options=list(range(1, 11)),
+    format_func=lambda x: f"Test Dataset {x} (heart_disease_test_set_{x}.csv)"
+)
+
+# 5. Main Dashboard Header & Dataset Description
+st.title("Heart Disease Classification Dashboard")
+
+st.info(
+    "**Dataset Overview:** This dashboard evaluates machine learning models trained on the "
+    "*Heart Disease Prediction Dataset 2026*. Each test partition contains 200 balanced, unseen patient records "
+    "(100 healthy, 100 diagnosed with heart disease) across clinical and lifestyle indicators."
+)
+
+# 6. Load Selected Assets & Generate Predictions
+try:
+    model = load_model(MODEL_FILES[selected_model_name])
+    df_test = load_test_data(selected_dataset_num)
+
+    # Separate features and target
+    X_test = df_test.drop(columns=["heart_disease"])
+    y_true = df_test["heart_disease"]
+
+    # Generate predictions and probabilities
+    y_pred = model.predict(X_test)
+    
+    if hasattr(model, "predict_proba"):
+        y_prob = model.predict_proba(X_test)[:, 1]
+        auc_val = roc_auc_score(y_true, y_prob)
+    else:
+        auc_val = roc_auc_score(y_true, y_pred)
+
+    # Calculate all 6 performance metrics
+    acc_val = accuracy_score(y_true, y_pred)
+    prec_val = precision_score(y_true, y_pred, zero_division=0)
+    rec_val = recall_score(y_true, y_pred, zero_division=0)
+    f1_val = f1_score(y_true, y_pred, zero_division=0)
+    mcc_val = matthews_corrcoef(y_true, y_pred)
+
+    # 7. Dynamic Performance Summary Paragraph
+    st.markdown(
+        f"**Model Performance Summary:** Evaluating **{selected_model_name}** on **Test Dataset {selected_dataset_num}** "
+        f"yields an overall accuracy of **{acc_val:.2%}** and an AUC of **{auc_val:.4f}**. "
+        f"The model achieves a recall of **{rec_val:.2%}** (identifying true positive heart disease cases) "
+        f"with a precision of **{prec_val:.2%}**, resulting in a balanced MCC score of **{mcc_val:.4f}**."
+    )
+
+    st.divider()
+
+    # 8. Evaluation Metrics Grid
+    st.subheader(f"Evaluation Metrics for: {selected_model_name}")
+
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Accuracy", f"{acc_val:.4f}")
+    col2.metric("AUC Score", f"{auc_val:.4f}")
+    col3.metric("Precision", f"{prec_val:.4f}")
+
+    col4, col5, col6 = st.columns(3)
+    col4.metric("Recall", f"{rec_val:.4f}")
+    col5.metric("F1 Score", f"{f1_val:.4f}")
+    col6.metric("MCC Score", f"{mcc_val:.4f}")
+
+    st.divider()
+
+    # 9. Visual Confusion Matrix Plot
+    st.subheader("Confusion Matrix")
+
+    # Constrain the chart width using columns so it doesn't stretch across the entire wide screen
+    plot_col, _ = st.columns([1, 2])
+
+    with plot_col:
+        fig, ax = plt.subplots(figsize=(4, 4))
+        
+        # Ensure clean white plot background and remove gridlines
+        fig.patch.set_facecolor("white")
+        ax.set_facecolor("white")
+        
+        cm = confusion_matrix(y_true, y_pred)
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=[0, 1])
+        disp.plot(ax=ax, cmap="Blues", colorbar=False)
+        
+        ax.grid(False)
+        ax.set_title(selected_model_name, fontsize=12, fontweight="bold", pad=10)
+        
+        st.pyplot(fig, use_container_width=False)
+        plt.close(fig)
+
+except FileNotFoundError as e:
+    st.error(
+        f"**File Not Found Error:** Could not locate `{e.filename}`. "
+        "Please verify that your `model/` and `test_sets/` directories are uploaded to your GitHub repository "
+        "with the exact expected filenames."
+    )
+except Exception as e:
+    st.error(
+        f"**Prediction Error:** {str(e)}. "
+        "Ensure that your `.joblib` model includes the full preprocessing pipeline (One-Hot Encoding + StandardScaler) "
+        "so it can accept raw columns directly from the test CSV."
+    )
